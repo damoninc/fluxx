@@ -1,0 +1,10 @@
+{
+	"name": "string",
+	"description": "string",
+	"target": "SELF | OTHER_PLAYER | ALL_PLAYERS | DISCARD_PILE | DRAW_PILE | DRAW_SLOT | PLAY_SLOT | KEEPER_LIMIT_SLOT | HAND_LIMIT_SLOT | BONUS_RULES",
+	"cardType": "ACTION | KEEPER | GOAL | RULE",
+	"action": {
+		"actionType": "string",
+		"amount": "integer"
+	}
+}
