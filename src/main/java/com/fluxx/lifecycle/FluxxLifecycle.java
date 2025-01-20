@@ -6,33 +6,37 @@ import com.fluxx.gameObjects.player.Player;
 
 public class FluxxLifecycle {
     public boolean isGameOver = false;
-    public List<Player> players;
+    private boolean didDrawCards = false;
+    private boolean didPlayCards = false;
+    private Player player;
 
-    public FluxxLifecycle(List<Player> players) {
-        this.players = players;
+    public FluxxLifecycle(Player player, GameState state) {
+        this.player = player;
     }
 
     public void start() {
 
     }
 
-    public void drawCard() {
+    public void drawCards() {
+        if (this.didDrawCards) {
+            System.out.println("You may not draw cards, you already have drawn once your turn.");
+            return;
+        }
 
+        this.didDrawCards = true;
     }
 
     public void playCard() {
-
-    }
-
-    public Player getNextPlayer() {
-        return null;
+        if (this.didPlayCards) {
+            System.out.println("You may not play cards, you already have played once your turn.");
+            return;
+        }
+        this.didPlayCards = true;
     }
 
     public void determineWinner() {
 
     }
 
-    public List<Player> getPlayers() {
-        return this.players;
-    }
 }

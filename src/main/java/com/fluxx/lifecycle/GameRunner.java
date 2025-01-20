@@ -14,10 +14,11 @@ public class GameRunner {
         Player player2 = new Player("Player 2");
         List<Player> players = new ArrayList<Player>(Arrays.asList(player1, player2));
 
-        FluxxLifecycle lifecycle = new FluxxLifecycle(players);
+        // FluxxLifecycle lifecycle = new FluxxLifecycle(players);
 
-        while (!lifecycle.isGameOver) {
-            lifecycle.start();
-        }
+        // while (!lifecycle.isGameOver) {
+        // lifecycle.start();
+        // }
+
     }
 }
